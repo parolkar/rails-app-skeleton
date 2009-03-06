@@ -27,9 +27,10 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem "rspec-rails"
+  config.gem "rcov"
+  #config.gem "rspec-rails"
   config.gem "vlad"   
-
+  config.gem "rubyist-aasm" , :source => "http://gems.github.com"
 
 
   # Only load the plugins named here, in the order given. By default, all plugins 
@@ -76,4 +77,6 @@ Rails::Initializer.run do |config|
   # Activate observers that should always be running
   # Please note that observers generated using script/generate observer need to have an _observer suffix
   # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
+  config.active_record.observers = :user_observer
+
 end
